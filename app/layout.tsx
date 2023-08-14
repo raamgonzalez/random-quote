@@ -5,8 +5,9 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Random Quote Generator',
-  description: 'Random Quote Generator using Next.js and Tailwind CSS',
+  title: 'Random quote generator',
+  description: 'Random quote generator built with Next.js',
+
 }
 
 export default function RootLayout({
