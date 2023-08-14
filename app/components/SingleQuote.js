@@ -29,19 +29,19 @@ export default function SingleQuote() {
 
 	return (
 
-		
-
-    <main className="flex flex-col min-h-screen px-10 py-5  md:px-40 md:py-10">
-      <header className='self-end'>
-        <button onClick={() => getQuote()} className={`flex gap-2 items-center self-end`}>
-          Random
-          <SymbolRandom />
-        </button>
-      </header>
-			{	loading 
-				? <p className='text-center mt-60'>Loading...</p> 
-				:	<Quote quote={quote}/>
-			}
-    </main>
+		<>
+			<header className='self-end bg-slate-200 px-4 py-3 rounded-md shadow-md shadow-slate-300 hover:bg-slate-300 transition-all ease-in-out border border-gray-300'>
+				<button onClick={() => getQuote()} className='flex gap-2 items-center self-end'>
+					Random
+					<SymbolRandom />
+				</button>
+			</header>
+			<main className="flex flex-col w-full self-center">
+				{	loading 
+					? <p className='text-center mt-20 md:h-[600px] text-5xl italic'>Loading...</p> 
+					:	<Quote quote={quote}/>
+				}
+			</main>
+		</>
 	)
 }
