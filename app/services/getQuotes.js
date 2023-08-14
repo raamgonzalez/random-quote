@@ -1,10 +1,7 @@
-'use client'
-
 import { API_URL_RANDOM } from "./settings";
 
 const fromApiResponseToQuotes = (apiResponse) => {
 	const { data } = apiResponse;
-	console.log(data)
 	if (Array.isArray(data)){
 		const quotes = data.map((quote) => {
 			const { _id, quoteText, quoteAuthor, quoteGenre } = quote;

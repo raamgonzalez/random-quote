@@ -1,14 +1,13 @@
-'use client'
 import React from 'react'
-import useQuotes from '../hooks/useQuotes'
+import getQuotes from '../services/getQuotes'
 
 export default function SingleQuote() {
 
-  const { quote, author, fetchQuote } = useQuotes()
+  const { _id, quoteText, quoteAuthor, quoteGenre } = getQuotes()
 
+	console.log(quote)
 
-  console.log(quote, author)
 	return (
-		<div>singleQuote</div>
+		<div>{quoteText}</div>
 	)
 }
