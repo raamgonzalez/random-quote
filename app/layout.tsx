@@ -17,7 +17,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} flex justify-center`}>{children}</body>
+      <body className={`${inter.className} flex justify-center`}>
+        <main className='px-5 py-5 md:px-40 md:py-10 w-full max-w-[100rem]'>
+          {children}
+        </main>
+      </body>
     </html>
   )
 }
